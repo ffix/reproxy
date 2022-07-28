@@ -204,7 +204,6 @@ func (h *Http) proxyHandler() http.HandlerFunc {
 			r.URL.Path = uu.Path
 			r.URL.Host = uu.Host
 			r.URL.Scheme = uu.Scheme
-			r.Host = uu.Host
 			h.setXRealIP(r)
 		},
 		Transport: &http.Transport{
